@@ -1,9 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Blog',
   },
   plugins: [
-    'gatsby-plugin-react-helmet', 'gatsby-mdx',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-mdx',
+      options: {
+        defaultLayouts: {
+          posts: require.resolve('./src/components/layout.js'),
+          default: require.resolve('./src/components/layout.js'),
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
