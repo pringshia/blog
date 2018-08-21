@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import * as moment from 'moment'
 
 import Layout from '../components/layout'
 
@@ -17,7 +18,9 @@ const IndexPage = ({ data }) => {
               <ul id="posts">
                 {pages.map(page => (
                   <li>
-                    <span className="date">{page.frontmatter.date} </span>
+                    <span className="date">
+                      {moment(page.frontmatter.date).format('MMM Do')}
+                    </span>
                     <Link to={page.frontmatter.slug}>
                       {page.frontmatter.title}
                     </Link>
