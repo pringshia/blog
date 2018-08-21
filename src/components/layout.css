@@ -148,7 +148,7 @@ ul#posts span.date {
 
 .post-content {
   width: 640px;
-  margin: 180px auto 0;
+  margin: 180px auto 80px;
   font-size: 24px;
   line-height: 1.5em;
   font-family: 'Gentium Basic', sans-serif;
@@ -169,9 +169,13 @@ ul#posts span.date {
   font-style: normal;
   display: block;
 }
-.post-content ol li {
+.post-content ol li,
+.post-content ul li {
   margin-left: 20px;
   margin-bottom: 15px;
+}
+
+.post-content ol li {
   font-style: italic;
 }
 
