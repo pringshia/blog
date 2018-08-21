@@ -38,6 +38,12 @@ body {
   margin-bottom: 40px;
 }
 
+@media (max-width: 480px) {
+  div#homepage .logo {
+    font-size: 30px;
+  }
+}
+
 h1 {
   font-family: Exo;
   font-style: italic;
@@ -58,49 +64,139 @@ h3 {
   color: black;
 }
 
-a {
+#homepage a {
   color: #420904;
+}
+#homepage a::before {
+  border-bottom: 8px solid rgb(109, 35, 35, 0.3);
+}
+
+.content a {
+  color: #0079ff;
   text-decoration: none;
   position: relative;
   font-family: 'Alegreya Sans SC', sans-serif;
   letter-spacing: 2px;
   font-size: 0.9em;
   padding: 0 3px;
+  z-index: 1;
 }
 
-a::before {
+.content a::before {
   content: '';
   position: absolute;
-  border-bottom: 8px solid rgb(109, 35, 35, 0.3);
+  border-bottom: 8px solid #dcf2ff;
   display: inline-block;
   left: 6px;
   bottom: 2px;
-  z-index: 0;
+  z-index: -1;
   right: 6px;
 }
 
-ul#posts li {
-  list-style-type: none;
-  cursor: pointer;
-}
 ul#posts {
   margin: 0 0 30px;
+  padding: 0;
   font-family: 'Gentium Basic';
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0px;
   font-size: 20px;
 }
-ul#posts {
-  margin: 0px;
-  padding: 0;
+ul#posts li {
+  list-style-type: none;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
-
 ul#posts span.date {
   display: inline-block;
-  width: 100px;
+  width: 90px;
   text-align: right;
   padding-right: 10px;
   color: #820e05;
   font-size: 16px;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #d33a2c;
+  padding: 20px 5px;
+  color: white;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  border-bottom: 1px solid #8e2a21;
+}
+
+.header h1.logo {
+  font-size: 24px;
+  margin: 0 0 0 20px;
+}
+
+/* POST CONTENT */
+
+@media (max-width: 720px) {
+  div.post-content {
+    padding: 30px;
+    width: auto;
+    margin-top: 60px;
+  }
+}
+
+.post-content {
+  width: 640px;
+  margin: 180px auto 0;
+  font-size: 24px;
+  line-height: 1.5em;
+  font-family: 'Gentium Basic', sans-serif;
+}
+
+.post-content h1,
+.post-content h3 {
+  color: #383535;
+}
+
+.post-content p {
+  margin-top: 40px;
+}
+
+.post-content ol li span {
+  padding-left: 20px;
+  line-height: 1.1em;
+  font-style: normal;
+  display: block;
+}
+.post-content ol li {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.post-content span.upper {
+  font-style: normal;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-family: 'Gentium Book Basic';
+}
+
+.post-content strong {
+  font-family: 'Gentium Book Basic';
+  font-weight: 700;
+  font-style: italic;
+  color: #222;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 40px 40px;
+  font-family: 'Gentium Basic';
+}
+
+.post-content h3 + p {
+  margin-top: -20px;
 }

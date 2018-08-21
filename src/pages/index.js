@@ -6,15 +6,19 @@ import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => {
   const pages = data.allMdx.edges.map(({ node }) => node)
+  const sortedPages = pages.sort(
+    (a, b) => (moment(a.frontmatter.date) - moment(b.frontmatter.date)) * -1
+  )
+
   return (
     <Layout ignoreHeader={true}>
       <div id="homepage">
         <ul>
-          <li className="logo">i made a blog</li>
+          <li className="logo">{data.site.siteMetadata.title}</li>
           <li>
             <div>
               <ul id="posts">
-                {pages.map(page => (
+                {sortedPages.map(page => (
                   <li>
                     <span className="date">
                       {moment(page.frontmatter.date).format('MMM Do')}
@@ -46,6 +50,11 @@ export const query = graphql`
             date
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

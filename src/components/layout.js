@@ -45,14 +45,7 @@ const Layout = ({ children, data, ignoreHeader = false }) => (
           />
         </Helmet>
         {!ignoreHeader && <Header siteTitle={data.site.siteMetadata.title} />}
-        <div
-          style={{
-            margin: '0 auto',
-            minHeight: '100vh',
-            // padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
+        <div className={'content' + (ignoreHeader ? '' : ' post-content')}>
           {children}
         </div>
       </>
