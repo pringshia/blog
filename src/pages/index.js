@@ -5,7 +5,9 @@ import * as moment from 'moment'
 import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => {
-  const pages = data.allMdx.edges.map(({ node }) => node)
+  const pages = data.allMdx.edges
+    .map(({ node }) => node)
+    .filter(page => !page.frontmatter.draft)
   const sortedPages = pages.sort(
     (a, b) => (moment(a.frontmatter.date) - moment(b.frontmatter.date)) * -1
   )
@@ -48,6 +50,7 @@ export const query = graphql`
             title
             slug
             date
+            draft
           }
         }
       }
