@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import './layout.css'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, ignoreHeader = false }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -27,13 +27,29 @@ const Layout = ({ children, data }) => (
           ]}
         >
           <html lang="en" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,400i,700"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Exo:900,900i"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i"
+            rel="stylesheet"
+          />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        {!ignoreHeader && <Header siteTitle={data.site.siteMetadata.title} />}
         <div
           style={{
             margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
+            minHeight: '100vh',
+            // padding: '0px 1.0875rem 1.45rem',
             paddingTop: 0,
           }}
         >

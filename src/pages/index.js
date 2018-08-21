@@ -6,17 +6,28 @@ import Layout from '../components/layout'
 const IndexPage = ({ data }) => {
   const pages = data.allMdx.edges.map(({ node }) => node)
   return (
-    <Layout>
-      {JSON.stringify(pages)}
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      {pages.map(page => (
-        <div>
-          {page.frontmatter.date}{' '}
-          <Link to={page.frontmatter.slug}>{page.frontmatter.title}</Link>
-        </div>
-      ))}
+    <Layout ignoreHeader={true}>
+      <div id="homepage">
+        {/* {JSON.stringify(pages)} */}
+        {/* <h1 style={{ fontFamily: 'Exo' }}>Hi people</h1> */}
+        <ul>
+          <li className="logo">i made a blog</li>
+          <li>
+            <div>
+              <ul id="posts">
+                {pages.map(page => (
+                  <li>
+                    <span className="date">{page.frontmatter.date} </span>
+                    <Link to={page.frontmatter.slug}>
+                      {page.frontmatter.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
     </Layout>
   )
 }
@@ -31,6 +42,7 @@ export const query = graphql`
           frontmatter {
             title
             slug
+            date
           }
         }
       }
