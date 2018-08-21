@@ -9,8 +9,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout ignoreHeader={true}>
       <div id="homepage">
-        {/* {JSON.stringify(pages)} */}
-        {/* <h1 style={{ fontFamily: 'Exo' }}>Hi people</h1> */}
         <ul>
           <li className="logo">i made a blog</li>
           <li>
