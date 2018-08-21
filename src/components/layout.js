@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import './layout.css'
 
-const Layout = ({ children, data, ignoreHeader = false }) => (
+const Layout = ({ children, data, isForPost = true }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -22,8 +22,15 @@ const Layout = ({ children, data, ignoreHeader = false }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content: 'A young blog just trying to make it in this world.',
+            },
+            { name: 'keywords', content: 'technology, thoughts, ideas' },
+            {
+              name: 'viewport',
+              content: 'width=device-width, initial-scale=1',
+            },
           ]}
         >
           <html lang="en" />
@@ -44,8 +51,8 @@ const Layout = ({ children, data, ignoreHeader = false }) => (
             rel="stylesheet"
           />
         </Helmet>
-        {!ignoreHeader && <Header siteTitle={data.site.siteMetadata.title} />}
-        <div className={'content' + (ignoreHeader ? '' : ' post-content')}>
+        {isForPost && <Header siteTitle={data.site.siteMetadata.title} />}
+        <div className={'content' + (isForPost ? ' post-content' : '')}>
           {children}
         </div>
       </>

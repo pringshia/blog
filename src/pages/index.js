@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
   )
 
   return (
-    <Layout ignoreHeader={true}>
+    <Layout isForPost={false}>
       <div id="homepage">
         <ul>
           <li className="logo">{data.site.siteMetadata.title}</li>
