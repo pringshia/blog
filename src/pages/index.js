@@ -23,7 +23,8 @@ const IndexPage = ({ data }) => {
                 {sortedPages.map(page => (
                   <li>
                     <span className="date">
-                      {moment(page.frontmatter.date).format('MMM Do')}
+                      {page.frontmatter.displayDate ||
+                        moment(page.frontmatter.date).format('MMM Do')}
                     </span>
                     <Link to={page.frontmatter.slug}>
                       {page.frontmatter.title}
@@ -50,6 +51,7 @@ export const query = graphql`
             title
             slug
             date
+            displayDate
             draft
           }
         }
