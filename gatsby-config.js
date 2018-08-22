@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'i made a blog!',
+    title: 'i made a blog',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -18,6 +18,13 @@ module.exports = {
       options: {
         name: 'posts',
         path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/`,
       },
     },
     {
