@@ -169,6 +169,9 @@ ul#posts span.date {
   font-style: normal;
   display: block;
 }
+.post-content ul {
+  padding: 0 0 0 15px;
+}
 .post-content ol li,
 .post-content ul li {
   margin-left: 20px;
