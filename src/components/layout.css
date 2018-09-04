@@ -149,7 +149,7 @@ ul#posts span.date {
 .post-content {
   width: 640px;
   margin: 180px auto 80px;
-  font-size: 24px;
+  font-size: 23px;
   line-height: 1.5em;
   font-family: 'Gentium Basic', sans-serif;
 }
@@ -198,10 +198,13 @@ ul#posts span.date {
   color: #222;
 }
 
-blockquote {
+.post-content blockquote {
   font-style: italic;
   margin: 40px 40px;
   font-family: 'Gentium Basic';
+  border-left: 3px solid #ccc;
+  padding-left: 20px;
+  color: #777;
 }
 
 .post-content h3 + p {
