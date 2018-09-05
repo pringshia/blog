@@ -120,7 +120,7 @@ ul#posts span.date {
 
 .header {
   background-color: #d33a2c;
-  padding: 20px 5px;
+  padding: 13px 5px;
   color: white;
   user-select: none;
   position: fixed;
@@ -132,7 +132,7 @@ ul#posts span.date {
 }
 
 .header h1.logo {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0 0 0 20px;
 }
 
@@ -148,7 +148,7 @@ ul#posts span.date {
 
 .post-content {
   width: 640px;
-  margin: 180px auto 80px;
+  margin: 160px auto 80px;
   font-size: 23px;
   line-height: 1.5em;
   font-family: 'Gentium Basic', sans-serif;
