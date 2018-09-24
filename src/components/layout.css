@@ -36,11 +36,13 @@ body {
   font-style: italic;
   font-size: 56px;
   margin-bottom: 40px;
+  text-shadow: 0px 2px 2px #9e0d00;
 }
 
 @media (max-width: 480px) {
   div#homepage .logo {
     font-size: 30px;
+    text-shadow: 0px 1px 1px #9e0d00;
   }
 }
 
@@ -95,12 +97,15 @@ h3 {
 
 ul#posts {
   margin: 0 0 30px;
-  padding: 0;
+  padding: 30px 30px 20px;
   font-family: 'Gentium Basic';
   font-weight: 400;
   text-transform: none;
   letter-spacing: 0px;
   font-size: 20px;
+  background-color: #ffe9e9;
+  border-top: 5px solid #b10e00;
+  border-bottom: 5px solid #b10e00;
 }
 ul#posts li {
   list-style-type: none;
@@ -134,6 +139,7 @@ ul#posts span.date {
 .header h1.logo {
   font-size: 20px;
   margin: 0 0 0 20px;
+  text-shadow: 0px 1px 1px #9e0d00;
 }
 
 /* POST CONTENT */

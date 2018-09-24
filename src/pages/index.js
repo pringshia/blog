@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout isForPost={false}>
       <div id="homepage">
-        <ul>
+        <ul style={{ padding: '0 30px' }}>
           <li className="logo">{data.site.siteMetadata.title}</li>
           <li>
             <div>
