@@ -23,7 +23,6 @@ body {
 
 #homepage li {
   list-style-type: none;
-  cursor: pointer;
 }
 
 #homepage li a:active {
@@ -37,6 +36,7 @@ body {
   font-size: 56px;
   margin-bottom: 40px;
   text-shadow: 0px 2px 2px #9e0d00;
+  cursor: pointer;
 }
 
 @media (max-width: 480px) {
@@ -70,7 +70,7 @@ h3 {
   color: #420904;
 }
 #homepage a::before {
-  border-bottom: 8px solid rgb(109, 35, 35, 0.3);
+  border-bottom: 8px solid rgb(222, 168, 168, 0.3);
 }
 
 .content a {
@@ -109,7 +109,6 @@ ul#posts {
 }
 ul#posts li {
   list-style-type: none;
-  cursor: pointer;
   margin-bottom: 20px;
 }
 ul#posts span.date {
@@ -119,6 +118,13 @@ ul#posts span.date {
   padding-right: 10px;
   color: #820e05;
   font-size: 16px;
+}
+
+@media (max-width: 720px) {
+  #homepage ul#posts span.date {
+    display: block;
+    text-align: left;
+  }
 }
 
 /* HEADER */
@@ -154,7 +160,7 @@ ul#posts span.date {
 
 .post-content {
   width: 640px;
-  margin: 160px auto 80px;
+  margin: 160px auto 160px;
   font-size: 23px;
   line-height: 1.5em;
   font-family: 'Gentium Basic', sans-serif;

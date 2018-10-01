@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
             <div>
               <ul id="posts">
                 {sortedPages.map(page => (
-                  <li>
+                  <li key={page.frontmatter.slug}>
                     <span className="date">
                       {page.frontmatter.displayDate ||
                         moment(page.frontmatter.date).format('MMM Do')}
