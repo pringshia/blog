@@ -34,6 +34,20 @@ const Layout = ({ children, data, isForPost = true }) => (
           ]}
         >
           <html lang="en" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-128036355-1"
+          />
+          <script>
+            {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-128036355-1');
+            `}
+          </script>
+
           <link
             href="https://fonts.googleapis.com/css?family=Gentium+Basic:400,400i,700"
             rel="stylesheet"
