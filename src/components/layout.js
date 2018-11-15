@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import './layout.css'
+import Signup from './signup'
 
 const Layout = ({ children, data, isForPost = true }) => (
   <StaticQuery
@@ -69,6 +70,19 @@ const Layout = ({ children, data, isForPost = true }) => (
         <div className={'content' + (isForPost ? ' post-content' : '')}>
           {children}
         </div>
+        {isForPost && (
+          <div
+            style={{
+              margin: '-80px 0',
+              borderTop: '1px solid #eee',
+              paddingTop: 50,
+              paddingBottom: 80,
+              backgroundColor: '#eee',
+            }}
+          >
+            <Signup dark />
+          </div>
+        )}
       </>
     )}
   />

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import * as moment from 'moment'
+import SignupForm from '../components/signup'
 
 import Layout from '../components/layout'
 
@@ -32,6 +33,9 @@ const IndexPage = ({ data }) => {
                   </li>
                 ))}
               </ul>
+            </div>
+            <div>
+              <SignupForm />
             </div>
           </li>
         </ul>
