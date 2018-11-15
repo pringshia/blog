@@ -18,9 +18,6 @@ const IndexPage = ({ data }) => {
       <div id="homepage">
         <ul style={{ padding: '0 30px' }}>
           <li className="logo">{data.site.siteMetadata.title}</li>
-          <div>
-            <SignupForm />
-          </div>
           <li>
             <div>
               <ul id="posts">
@@ -36,6 +33,9 @@ const IndexPage = ({ data }) => {
                   </li>
                 ))}
               </ul>
+            </div>
+            <div>
+              <SignupForm />
             </div>
           </li>
         </ul>
