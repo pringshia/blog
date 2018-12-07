@@ -91,3 +91,5 @@ const Layout = ({ children, data, isForPost = true }) => (
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+
+export default Layout
