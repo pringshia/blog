@@ -82,8 +82,10 @@ h3 {
   font-size: 0.9em;
   padding: 0 3px;
   z-index: 1;
+  text-shadow: 3px 2px rgb(210, 238, 255);
 }
 
+/*
 .content a::before {
   content: '';
   position: absolute;
@@ -94,6 +96,7 @@ h3 {
   right: 6px;
   z-index: -1;
 }
+*/
 
 ul#posts {
   margin: 0 0 30px;
