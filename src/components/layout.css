@@ -68,6 +68,7 @@ h3 {
 
 #homepage a {
   color: #420904;
+  text-shadow: none;
 }
 #homepage a::before {
   border-bottom: 8px solid rgb(222, 168, 168, 0.3);
@@ -85,8 +86,8 @@ h3 {
   text-shadow: 3px 2px rgb(210, 238, 255);
 }
 
-/*
-.content a::before {
+
+#homepage .content a::before {
   content: '';
   position: absolute;
   border-bottom: 8px solid #dcf2ff;
@@ -96,7 +97,6 @@ h3 {
   right: 6px;
   z-index: -1;
 }
-*/
 
 ul#posts {
   margin: 0 0 30px;
