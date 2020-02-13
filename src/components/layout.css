@@ -70,9 +70,6 @@ h3 {
   color: #420904;
   text-shadow: none;
 }
-#homepage a::before {
-  border-bottom: 8px solid rgb(222, 168, 168, 0.3);
-}
 
 .content a {
   color: #0079ff;
@@ -83,14 +80,14 @@ h3 {
   font-size: 0.9em;
   padding: 0 3px;
   z-index: 1;
-  text-shadow: 3px 2px rgb(210, 238, 255);
+  text-shadow: 2px 1px rgb(210, 238, 255);
 }
 
 
-#homepage .content a::before {
+#homepage a::before {
   content: '';
   position: absolute;
-  border-bottom: 8px solid #dcf2ff;
+  border-bottom: 8px solid rgb(222, 168, 168, 0.3);
   display: inline-block;
   left: 6px;
   bottom: 2px;
