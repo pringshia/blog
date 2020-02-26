@@ -73,6 +73,10 @@ h3 {
 }
 
 #homepage a:hover {
+  background-color: none; 
+}
+
+.content a:hover {
   background-color: #e7f0fd; 
 }
 
