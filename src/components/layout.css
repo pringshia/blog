@@ -80,7 +80,7 @@ h3 {
   font-size: 0.9em;
   padding: 0 3px;
   z-index: 1;
-  text-shadow: 2px 1px rgb(210, 238, 255);
+  /* text-shadow: 2px 1px rgb(210, 238, 255); */
 }
 
 
