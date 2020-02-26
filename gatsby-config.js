@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'i made a blog',
+    title: 'pratik.wtf',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
