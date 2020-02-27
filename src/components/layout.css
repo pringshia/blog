@@ -69,11 +69,11 @@ h3 {
 #homepage a {
   color: #420904;
   text-shadow: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 #homepage a:hover {
-  background-color: none; 
+  background-color: transparent; 
 }
 
 .content a:hover {
