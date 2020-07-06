@@ -177,6 +177,7 @@ ul#posts span.date {
   font-size: 23px;
   line-height: 1.5em;
   font-family: 'Gentium Basic', sans-serif;
+  color: #2f3031;
 }
 
 .post-content h1,
@@ -220,7 +221,7 @@ ul#posts span.date {
   font-family: 'Gentium Book Basic';
   font-weight: 700;
   font-style: italic;
-  color: #222;
+  color: #4b4c50;
 }
 
 .post-content blockquote {
