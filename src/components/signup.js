@@ -12,7 +12,7 @@ export default props => (
       target="_blank"
       noValidate
     >
-      <h2>Get notified of new posts.</h2>
+      <h2 className="callout">Get notified of new posts</h2>
       <div id="mc_embed_signup_scroll">
         <div className="mc-field-group">
           <label htmlFor="mce-EMAIL">Email Address: </label>
