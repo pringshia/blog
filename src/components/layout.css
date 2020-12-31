@@ -71,7 +71,7 @@ h3 {
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 40px;
   color: #ddd;
 }
 
@@ -216,11 +216,6 @@ ul#posts span.date {
   padding-left: 20px;
 }
 
-.post-content ol li {
-  /* font-style: italic; */
-  padding-left: 20px;
-}
-
 .post-content ol li div.list-content {
   font-weight: normal;
 }
@@ -267,6 +262,16 @@ ul#posts span.date {
   border-left: 3px solid #ccc;
   padding-left: 20px;
   color: #777;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .post-content blockquote {
+    margin: 0 20px 0 -30px;
+  }
+  .post-content ul li,
+  .post-content ol li {
+    padding-left: 0px;
+  }
 }
 
 subtitle {
