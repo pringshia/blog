@@ -58,6 +58,7 @@ h1 {
   margin-bottom: 30px;
 }
 
+h2,
 h3 {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -69,6 +70,15 @@ h3 {
   color: black;
 }
 
+h2 {
+  font-size: 50px;
+  color: #ddd;
+}
+
+h2 + h3 {
+  margin-top: 40px;
+}
+
 #homepage a {
   color: #420904;
   text-shadow: none;
@@ -76,11 +86,11 @@ h3 {
 }
 
 #homepage a:hover {
-  background-color: transparent; 
+  background-color: transparent;
 }
 
 .content a:hover {
-  background-color: #e7f0fd; 
+  background-color: #e7f0fd;
 }
 
 .content a {
@@ -96,7 +106,6 @@ h3 {
   border-radius: 6px;
   /* text-shadow: 2px 1px rgb(210, 238, 255); */
 }
-
 
 #homepage a::before {
   content: '';
@@ -175,7 +184,7 @@ ul#posts span.date {
 .post-content {
   width: 640px;
   margin: 160px auto 160px;
-  font-size: 23px;
+  font-size: 24px;
   line-height: 1.5em;
   font-family: 'Gentium Basic', sans-serif;
   color: #2f3031;
@@ -196,17 +205,43 @@ ul#posts span.date {
   font-style: normal;
   display: block;
 }
-.post-content ul {
-  padding: 0 0 0 15px;
+.post-content ul,
+.post-content ol {
+  padding: 0 0 0 20px;
 }
 .post-content ol li,
 .post-content ul li {
   margin-left: 20px;
   margin-bottom: 15px;
+  padding-left: 20px;
 }
 
 .post-content ol li {
-  font-style: italic;
+  /* font-style: italic; */
+  padding-left: 20px;
+}
+
+.post-content ol li div.list-content {
+  font-weight: normal;
+}
+
+.post-content li {
+  list-style: none;
+  position: relative;
+}
+.post-content li::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='lightgrey'/%3E%3C/svg%3E");
+  background-size: 38%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: absolute;
+  top: 0.35rem;
+  left: -2rem;
+  float: left;
 }
 
 .post-content span.upper {
@@ -220,18 +255,35 @@ ul#posts span.date {
 
 .post-content strong {
   font-family: 'Gentium Book Basic';
-  font-weight: 700;
+  font-weight: 300;
   font-style: italic;
   color: #4b4c50;
 }
 
 .post-content blockquote {
-  font-style: italic;
   margin: 40px 40px;
-  font-family: 'Gentium Basic';
+  font-family: 'Helvetica', 'Arial';
+  font-weight: 200;
   border-left: 3px solid #ccc;
   padding-left: 20px;
   color: #777;
+}
+
+subtitle {
+  margin: 20px 0 40px 0px;
+  font-family: 'Helvetica', 'Arial';
+  font-weight: 200;
+  color: #777;
+  display: block;
+}
+
+.post-content blockquote small {
+  font-size: 18px;
+  line-height: 1.5em;
+  display: block;
+  margin-left: 30px;
+  position: relative;
+  right: -50px;
 }
 
 .post-content h3 + p {
@@ -266,4 +318,12 @@ hr {
     rgba(0, 0, 0, 0)
   );
   margin: 45px 0;
+}
+
+span.lead {
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: bold;
 }
